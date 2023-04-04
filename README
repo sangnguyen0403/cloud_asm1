@@ -1,0 +1,22 @@
+Task completed:
+Phan doc data dang bi van de la may cai VD nhu chiang Rai power station dang bi xuong dong ko can thiet"
+
+- First task:
+    - Create (checked)
+    - Read   (checked)
+    - Update (checked)
+    - Delete (checked)
+    - Filter by Countries, there is a select box for users to select a country to view all projects fall to that country (checked)
+    - Filter by Capacity, there is a select box for users to select a capacity to view all projects fall in that capacity range (checked)
+    - Search by Name and Location
+
+
+Question:
+- About the capacity range, we just need to do 3 ranges (0-10, 10-20, 20-50) or we need to do more because I see that there are many projects that has the capacity > 100
+- The new CSV file for Bigquery has one more column with every rows are null, and big query cannot detect the header as well so can I use the old one 
+- if user using filter or search the pagination when apply, when user remove filter and search pagination will start to apply again
+
+
+-Job for 2 night:
+- Lam lai cai thanh filter voi thanh search
+

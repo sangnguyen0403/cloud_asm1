@@ -1,0 +1,13 @@
+runtime: php55
+api_version: 1
+handlers:
+- url: /home
+  script: home.php
+- url: /addProject
+  script: addProject.php
+- url: /update.*
+  script: updateProject.php
+- url: /delete.*
+  script: deleteProject.php
+- url: /bigqueryDisplay.*
+  script: bigquery_home.php
