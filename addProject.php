@@ -1,6 +1,5 @@
 <?php 
     session_start();
-    // $data = '190,Sang,Nguyen,SangnNguyen,515.123.4569,21-Jan-22,SH_CLERK,2600,-,124,50';
     if(isset($_POST['submit'])){
         $file = fopen('gs://cloud-asm-1/project.csv','w');
         $projectName = $_POST['projectName'];
@@ -18,16 +17,12 @@
         $province = $_POST['province'];
         $district = $_POST['district'];
         $form_info = array($projectName,$subtype,$status ,$capacity,$yoc,$list_sponser,$sponser_comp,$list_lender,$lend_comp,$epc,$epc_participant,$country,$province,$district);
-        $project_info = implode($form_info, ','); // tạo thành array 
-        $_SESSION['info'][] = $project_info; //Add vào array info 
-        // foreach ($_SESSION['info'] as $value){
-        //     echo $value.'<br>';
-        // };
-        $info = implode($_SESSION['info'], PHP_EOL); //Rồi biến về dạng ban đầu 
-        fwrite($file, $info); //Bi cai write (Phai chuyen ve dang nhu truoc luc doc thi moi write vao dc)
+        $project_info = implode($form_info, ','); 
+        $_SESSION['info'][] = $project_info; 
+        $info = implode($_SESSION['info'], PHP_EOL); 
+        fwrite($file, $info); 
         fclose($file);
         header("Location: /home");
-        // echo 'Data written';
     };
 
 ?>

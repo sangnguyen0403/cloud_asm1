@@ -9,6 +9,8 @@ Phan doc data dang bi van de la may cai VD nhu chiang Rai power station dang bi 
     - Filter by Countries, there is a select box for users to select a country to view all projects fall to that country (checked)
     - Filter by Capacity, there is a select box for users to select a capacity to view all projects fall in that capacity range (checked)
     - Search by Name and Location
+    -Done Pagination in the list including: page size, page number, next, previous, first, last page. Default page size is 10.
+
 
 
 Question:
@@ -17,6 +19,5 @@ Question:
 - if user using filter or search the pagination when apply, when user remove filter and search pagination will start to apply again
 
 
--Job for 2 night:
-- Lam lai cai thanh filter voi thanh search
+
 

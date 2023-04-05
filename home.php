@@ -39,15 +39,14 @@
                 </div>
             </div>
         </div>
-    </div>
         <table class='table table-striped'>
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Project Name</th>
-                    <th scope="col">Subtype</th>
-                    <th scope="col">Current_Status</th>
+                    <!-- <th scope="col">Subtype</th>
+                    <th scope="col">Current_Status</th> -->
                     <th scope="col">Capacity</th>
-                    <th scope="col">Year of Completion</th>
+                    <!-- <th scope="col">Year of Completion</th>
                     <th scope="col">List of Sponser</th>
                     <th scope="col">Sponser Company</th>
                     <th scope="col">List of lender</th>
@@ -56,7 +55,7 @@
                     <th scope="col">EPC Participant</th>
                     <th scope="col">Country</th>
                     <th scope="col">Province/State</th>
-                    <th scope="col">District</th>
+                    <th scope="col">District</th> -->
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -65,27 +64,16 @@
                 list($name, $sub, $status, $capacity, $YoC, $list_sponsor, $spon_company, $list_lender, $lend_comp,$epc,$epc_participant,$country, $province, $district) = explode(",", $value);
                     echo' <div>';
                         echo '<tr>';
-                            checkNull($name);
-                            checkNull($sub);
-                            checkNull($status);
-                            checkNull($capacity);
-                            checkNull($YoC);
-                            checkNull($list_sponsor);
-                            checkNull($spon_company);
-                            checkNull($list_lender);
-                            checkNull($lend_comp);
-                            checkNull($epc);
-                            checkNull($epc_participant);
-                            checkNull($country);
-                            checkNull($province);
-                            checkNull($district);
+                            echo '<th>'. $name .' </th>';
+                            echo '<th>'. $capacity .' </th>';
                             echo '
-                                <th>
-                                    <button class="btn btn-primary"><a href="update.php?updateid='.$key.'" class="text-light">Update</a></button>
+                                <th class="d-inline-flex p-2 align-self-center">
+                                    <button class="btn btn-primary mt-4"><a href="update.php?updateid='.$key.'" class="text-light">Update</a></button>
+                                    <button class="btn btn-info mt-4"><a href="view.php?viewid='.$key.'" class="text-light">Update</a></button>
                                     <button class="btn btn-danger mt-4" data-toggle="modal" data-target="#exampleModal">Delete</button>
                                 </th>
                             ' ;
-                        echo '</tr';
+                            echo '</tr';
                     echo '</div>';
          }
           ?>
