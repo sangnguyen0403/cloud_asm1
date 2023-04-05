@@ -22,14 +22,14 @@
             $district = $_POST['district'];
             $form_info = array($projectName,$subtype,$status ,$capacity,$yoc,$list_sponser,$sponser_comp,$list_lender,$lend_comp,$epc,$epc_participant,$country,$province,$district);
             $project_info = implode($form_info, ','); 
-            foreach($_SESSION['info'] as $key => $value){ // Để kiếm cái đối tượng cần update rồi update thông tin trong cái array info session
+            foreach($_SESSION['info'] as $key => $value){
                 list($name, $sub, $status, $capacity, $YoC, $list_sponsor, $spon_company, $list_lender, $lend_comp,$epc,$epc_participant,$country, $province, $district) = explode(",", $value);
-                if(strcmp($key, $id) == 0){ //tìm cái ID cần update
+                if(strcmp($key, $id) == 0){ 
                     $_SESSION['info'][$key] = $project_info;
                 };
             };
             $info = implode($_SESSION['info'], PHP_EOL);
-            fwrite($file, $info); //Bi cai write (Phai chuyen ve dang nhu truoc luc doc thi moi write vao dc)
+            fwrite($file, $info); 
             fclose($file);
             // echo 'Data written';
             header("Location: /home"); 

@@ -11,3 +11,5 @@ handlers:
   script: deleteProject.php
 - url: /bigqueryDisplay.*
   script: bigquery_home.php
+- url: /view.*
+  script: viewProject.php
